@@ -55,10 +55,9 @@ while True:
                 # Nombre total de doigts levés
                 total_fingers = sum(fingers)
 
-    # Vérifier que l'index est valide (0 à 5)
     if 0 <= total_fingers <= 5:
         overlay = images[total_fingers]  # Sélectionner l'image correspondante
-        if overlay is not None:
+        if overlay is not None and results.multi_hand_landmarks:
             overlay = cv.resize(overlay, (200, 200))  # Redimensionner
             img[50:250, 50:250] = overlay  # Afficher en haut à gauche
         if overlay is None:
