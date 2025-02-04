@@ -1,56 +1,56 @@
 # HandsTracking
  
-# Projet 1 : Suivi du volume avec les gestes des doigts (PYCaw + MediaPipe)
+# Project 1: Volume tracking with finger gestures (PYCaw + MediaPipe)
 
 ## Description
-Ce projet utilise **PYCaw** pour contrôler le volume du système en fonction de la distance entre les doigts d'une main détectée via **MediaPipe**. Plus les doigts sont écartés, plus le volume augmente. L'application permet un contrôle intuitif du volume en utilisant la caméra de l'ordinateur et des gestes de la main.
+This project uses **PYCaw** to control the system volume based on the distance between the fingers of a hand detected via **MediaPipe**. The more fingers are spread apart, the more volume increases. The app allows intuitive volume control using the computer’s camera and hand gestures.
 
-## Fonctionnalités
-- Suivi en temps réel des mouvements des doigts via la caméra.
-- Contrôle du volume du système en fonction de l'écartement des doigts.
-- Affichage du volume actuel en pourcentage.
+## Features
+- Real-time tracking of finger movements via the camera.
+- Control the volume of the system according to the spacing of the fingers.
+- Display the current volume in percentage.
 
-## Prérequis
+## Prerequisites
 - **Python 3.x**
-- **Bibliothèques :**
-  - `opencv-python` (pour la gestion de la caméra et du traitement d'image)
-  - `mediapipe` (pour la détection des mains et des gestes)
-  - `pycaw` (pour contrôler le volume du système Windows)
+- **Libraries:**
+  - `opencv-python` (for camera and image processing management)
+  - `mediapipe` (for hand and gesture detection)
+  - `pycaw`(to control the volume of the Windows system)
 
 ## Installation
-1. Clone le projet sur ton ordinateur.
-2. Assures-toi d'avoir les librairies python nécessaires
-3. Exécute le fichier "Projet1.py" : python Projet1.py
+1. Clone the project on your computer.
+2. Make sure you have the necessary python libraries
+3. Runs the file "Projet1.py": python Projet1.py
 
-## Explication du code
-1. Détection des mains : Utilisation de MediaPipe pour détecter les positions des doigts dans l'image de la caméra.
-2. Calcul de l'écartement des doigts : L'écartement entre les doigts est calculé, et cette information est utilisée pour ajuster le volume du système via PYCaw.
-3. Affichage du volume : Le volume actuel est affiché en pourcentage et est ajusté dynamiquement lorsque l'écartement des doigts change.
+## Explanation of the code
+1. Hand detection: Use MediaPipe to detect finger positions in the camera image.
+2. Finger spacing calculation: The finger spacing is calculated, and this information is used to adjust the system volume via PYCaw.
+3. Volume display: The current volume is displayed as a percentage and is adjusted dynamically when the finger spacing changes.
 
-# Projet 2
+# Project 2
 
 ## Description
-Ce projet utilise **MediaPipe** pour détecter les doigts levés en temps réel via la caméra et afficher une image correspondante au nombre de doigts levés. Chaque image représente un nombre spécifique de doigts levés (0 à 5 doigts).
+This project uses **MediaPipe** to detect raised fingers in real time via the camera and display an image corresponding to the number of raised fingers. Each image represents a specific number of fingers raised (0 to 5 fingers).
 
-## Fonctionnalités
-- Détection des mains via la caméra en temps réel.
-- Comptage des doigts levés.
-- Affichage d'une image associée au nombre de doigts levés, avec une position fixée dans la fenêtre de la caméra.
-- Support d'une interface visuelle avec OpenCV.
+## Features
+- Hand detection via the camera in real time.
+- Counting fingers up.
+- Display an image associated with the number of fingers raised, with a fixed position in the camera window.
+- Support for a visual interface with OpenCV.
 
-## Prérequis
+## Prerequisites
 - **Python 3.x**
-- **Bibliothèques :**
-    - `opencv-python` (pour la gestion de la caméra et du traitement d'image)
-    - `mediapipe` (pour la détection des mains et des gestes)
+- **Libraries:**
+    - `opencv-python` (for camera and image processing management)
+    - `mediapipe` (for hand and gesture detection)
 
 ## Installation
-1. Clone le projet sur ton ordinateur.
-2. Assures-toi d'avoir les librairies python nécessaires
-3. Exécute le fichier "Projet2.py" : python Projet2.py
+1. Clone the project on your computer.
+2. Make sure you have the necessary python libraries
+3. Runs the "Projet2.py" file: python Projet2.py
 
-## Explication du code
-1. Détection des mains : Le code utilise MediaPipe pour détecter la main et les repères de la main en temps réel via la caméra.
-2. Comptage des doigts levés : Chaque doigt est comparé pour déterminer s'il est levé ou non en fonction de sa position.
-3. Affichage des images : Selon le nombre de doigts levés, une image associée (par exemple, ZeroFinger.png, OneFingers.png, etc.) est affichée sur l'écran dans la fenêtre vidéo. Cette image est redimensionnée et placée dans un coin de l'écran.
-4. Effet miroir : La caméra est affichée avec un effet miroir pour une interaction plus intuitive.
+## Explanation of the code
+1. Hand detection: The code uses MediaPipe to detect the hand and hand markers in real time via the camera.
+2. Counting raised fingers: Each finger is compared to determine whether or not it is raised based on its position.
+3. Image display: Based on the number of fingers raised, an associated image (for example, ZeroFinger.png, OneFingers.png, etc) is displayed on screen in the video window. This image is resized and placed in a corner of the screen.
+4. Mirror effect: The camera is displayed with a mirror effect for more intuitive interaction.
